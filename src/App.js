@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import logo from './logo.svg';
-import './App.css';
+
+import MainNav from './components/MainNav/MainNav';
+import LoginForm1 from './components/LoginForm1/LoginForm1';
 
 const AppStyle = styled.div`
   text-align: center;
 `
 
-const AppLogo = styled.img`
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-`
+
 
 const AppHeader = styled.div`
-  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
   height: 150px;
-  padding: 20px;
+  
   color: white;
 `
 const AppIntro = styled.p`
@@ -27,12 +27,14 @@ class App extends Component {
     return (
       <AppStyle>
         <AppHeader>
-          <AppLogo src={logo} alt="logo" />
-          <h2>Welcome to React</h2>
+          <MainNav />
+
+
         </AppHeader>
         <AppIntro>
-          To get started, edit <code>src/App.js</code> and save to reload.
+          
         </AppIntro>
+        <LoginForm1 />
       </AppStyle>
     );
   }
