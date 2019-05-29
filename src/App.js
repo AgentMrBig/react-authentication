@@ -1,19 +1,41 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+
+import MainNav from './components/MainNav/MainNav';
+import LoginForm1 from './components/LoginForm1/LoginForm1';
+
+const AppStyle = styled.div`
+  text-align: center;
+`
+
+
+
+const AppHeader = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: lightgray;
+  height: 150px;
+  
+  color: white;
+`
+const AppIntro = styled.p`
+  font-size: large;
+`
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <AppStyle>
+        <AppHeader>
+          <MainNav />
+
+
+        </AppHeader>
+        <AppIntro>
+          
+        </AppIntro>
+        <LoginForm1 />
+      </AppStyle>
     );
   }
 }
